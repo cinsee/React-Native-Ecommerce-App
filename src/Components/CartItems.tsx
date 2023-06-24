@@ -24,8 +24,8 @@ const Swiper: React.FC = () => (
     previewRowKey="0"
     previewOpenValue={-40}
     previewOpenDelay={3000}
-    // data={products.slice(0, 2)}
-    data={products}
+    data={products.slice(0, 2)}
+    // data={products}
     renderHiddenItem={renderHiddenItems}
     renderItem={renderItems}
     showsVerticalScrollIndicator={false}

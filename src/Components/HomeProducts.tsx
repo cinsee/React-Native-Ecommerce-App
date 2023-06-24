@@ -11,8 +11,11 @@ import {
 import products from "../data/Products";
 import Colors from "../color";
 import Rating from "./Rating";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeProducts = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView flex={1} showsVerticalScrollIndicator={false}>
       <Flex
@@ -22,6 +25,7 @@ const HomeProducts = () => {
         px={6}>
         {products.map((product) => (
           <Pressable
+            onPress={() => navigation.navigate("Single", product)}
             key={product._id}
             w="47%"
             bg={Colors.white}
@@ -40,7 +44,7 @@ const HomeProducts = () => {
             />
             <Box px={4} pt={1}>
               <Heading size="sm" bold>
-                ${product.price}
+                ${product.price.toFixed(2)}
               </Heading>
               <Text fontSize={10} mt={1} isTruncated w="full">
                 {product.name}

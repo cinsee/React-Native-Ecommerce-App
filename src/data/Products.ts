@@ -30,7 +30,7 @@ const products: Products[] = [
     description:
       "Created in 1917 as a non-skid basketball shoe, the All Star was originally promoted for its superior court performance by basketball mastermind Chuck Taylor.",
     price: 57,
-    countInStock: 3,
+    countInStock: 0,
     rating: 4,
     numReviews: 4,
   },

@@ -11,8 +11,10 @@ import {
 } from "native-base";
 import Colors from "../color";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
-
-const LoginScreen = () => {
+interface Props {
+  navigation: any;
+}
+const LoginScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <Box flex={1} bg={Colors.black}>
       <Image
@@ -66,10 +68,11 @@ const LoginScreen = () => {
           my={30}
           w="40%"
           rounded={50}
-          bg={Colors.main}>
+          bg={Colors.main}
+          onPress={() => navigation.navigate("Bottom")}>
           LOGIN
         </Button>
-        <Pressable mt={4}>
+        <Pressable mt={4} onPress={() => navigation.navigate("Register")}>
           <Text color={Colors.black}>SIGN UP</Text>
         </Pressable>
       </Box>

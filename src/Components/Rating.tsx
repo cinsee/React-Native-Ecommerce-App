@@ -36,11 +36,11 @@ const Rating = ({ value, text }: RatingProps) => {
         color={color}
         size={size}
       />
-      {/* {text && (
+      {text && (
         <Text fontSize={12} ml={2}>
           {text}
         </Text>
-      )} */}
+      )}
     </HStack>
   );
 };
